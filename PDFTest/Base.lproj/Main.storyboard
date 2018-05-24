@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YMh-8o-lAr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PDFTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeh-Bo-gWO">
+                                <rect key="frame" x="149" y="232" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Quick Look"/>
+                                <connections>
+                                    <action selector="quickLookBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAV-Zm-oVb"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3V8-0Y-u26">
+                                <rect key="frame" x="169" y="315.5" width="37" height="37"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pga-f1-g3W">
+                                <rect key="frame" x="153" y="319" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Web View"/>
+                                <connections>
+                                    <action selector="webViewBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgy-P6-krP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sV1-NV-ST6">
+                                <rect key="frame" x="164" y="397" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PDFKit"/>
+                                <connections>
+                                    <action selector="pdfKitBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8d7-mQ-Fmc"/>
+                                    <segue destination="Dlv-aL-Ili" kind="show" id="0I7-tC-kNA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3V8-0Y-u26" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PjM-HI-iBf"/>
+                            <constraint firstItem="3V8-0Y-u26" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kfy-xf-l1B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gSW-qo-1IJ"/>
+                    <connections>
+                        <outlet property="activityInducatiorView" destination="3V8-0Y-u26" id="zFb-0T-4Hr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Kit View Controller-->
+        <scene sceneID="cZY-1T-5oO">
+            <objects>
+                <viewController id="Ybo-61-eTC" customClass="PDFKitViewController" customModule="PDFTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D1q-8p-SVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbe-yt-TTO" customClass="PDFThumbnailView">
+                                <rect key="frame" x="0.0" y="64" width="80" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="wVk-Gp-weU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiK-Xu-QTh" customClass="PDFView">
+                                <rect key="frame" x="80" y="64" width="295" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tbe-yt-TTO" firstAttribute="top" secondItem="D1q-8p-SVJ" secondAttribute="topMargin" id="8Id-8A-y5R"/>
+                            <constraint firstItem="aiK-Xu-QTh" firstAttribute="leading" secondItem="Lkx-qr-L6H" secondAttribute="leading" constant="80" id="AXP-CR-DRN"/>
+                            <constraint firstItem="Tbe-yt-TTO" firstAttribute="leading" secondItem="Lkx-qr-L6H" secondAttribute="leading" id="MKC-zL-7fT"/>
+                            <constraint firstItem="aiK-Xu-QTh" firstAttribute="bottom" secondItem="Lkx-qr-L6H" secondAttribute="bottom" id="QK1-GV-21v"/>
+                            <constraint firstItem="Tbe-yt-TTO" firstAttribute="bottom" secondItem="Lkx-qr-L6H" secondAttribute="bottom" id="bax-Wb-6A5"/>
+                            <constraint firstItem="aiK-Xu-QTh" firstAttribute="top" secondItem="Lkx-qr-L6H" secondAttribute="top" id="hLS-8j-38Q"/>
+                            <constraint firstItem="aiK-Xu-QTh" firstAttribute="trailing" secondItem="Lkx-qr-L6H" secondAttribute="trailing" id="y7U-Td-7am"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lkx-qr-L6H"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sH2-S9-Ujx">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Sidebar" id="yc4-9b-s5i">
+                                <connections>
+                                    <action selector="sidebarTapped:" destination="Ybo-61-eTC" id="yb6-MT-stc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Reset" id="iY5-L6-oSe">
+                                <connections>
+                                    <action selector="resetTapped:" destination="Ybo-61-eTC" id="QCk-ZC-bxv"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Next" id="geU-Er-jUv">
+                                <connections>
+                                    <action selector="nextTapped:" destination="Ybo-61-eTC" id="J0f-Wx-4Nj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Prev" id="9MS-Am-tZT">
+                                <connections>
+                                    <action selector="previousTapped:" destination="Ybo-61-eTC" id="B1o-nE-beg"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="geU-Er-jUv" id="0I2-4Q-PBc"/>
+                        <outlet property="pdfThumbnailView" destination="Tbe-yt-TTO" id="40m-eb-Rto"/>
+                        <outlet property="pdfView" destination="aiK-Xu-QTh" id="BOz-Ce-Oaq"/>
+                        <outlet property="previousButton" destination="9MS-Am-tZT" id="EQD-0G-vaX"/>
+                        <outlet property="sidebarLeadingConstraint" destination="MKC-zL-7fT" id="F2o-zc-ePI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4V-7s-U5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3004" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Eja-xc-0dG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YMh-8o-lAr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="URr-sk-gF4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kPm-E8-ysr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfC-oJ-rgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="227"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fbr-9v-zeq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dlv-aL-Ili" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9fo-lv-y4P">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ybo-61-eTC" kind="relationship" relationship="rootViewController" id="tM8-vg-u6l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSA-VP-VHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2064.8000000000002" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
